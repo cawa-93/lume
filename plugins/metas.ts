@@ -121,7 +121,8 @@ export default function (userOptions?: Options) {
       // SEO
       addMeta(document, "name", "description", description, 155);
       addMeta(document, "name", "keywords", keywords?.join(", "));
-
+      addMeta(document, "property", "canonical", url);
+      
       if (robots === true) {
         addMeta(document, "name", "robots", "index, follow");
       } else if (robots === false) {
